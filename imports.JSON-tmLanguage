@@ -1,0 +1,45 @@
+// [PackageDev] target_format: plist, ext: tmLanguage
+{
+    "name": "Imports",
+    "scopeName": "source.imports",
+    "fileTypes": ["Imports"],
+    "uuid": "3d8cd709-474c-4bfe-9cdf-986f5d86a0b0",
+    "patterns": [
+        { "include": "#empty"},
+        { "include": "#comment" },
+        { "include": "#path" }
+    ],
+
+    "repository": {
+        "empty": {
+            "match": "^\\s*$",
+            "name": "empty.imports"
+        },
+        "path": {
+            "begin": "^",
+            "end": "$",
+            "patterns": [
+                { "include": "#var" },
+                { "include": "#imports" },
+                { "include": "#js" }
+            ],
+            "name": "string.imports"
+        },
+        "var": {
+            "match": "\\$[a-zA-Z0-9]*",
+            "name": "support.type.variable.imports"
+        },
+        "imports": {
+            "match": "\\.imports",
+            "name": "constant.language.imports"
+        },
+        "js": {
+            "match": "\\.js",
+            "name": "keyword.imports"
+        },
+        "comment": {
+            "match": "^\\/\\/.*$",
+            "name": "comment.imports"
+        }
+    }
+}
