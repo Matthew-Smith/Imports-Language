@@ -21,6 +21,7 @@
             "patterns": [
                 { "include": "#var" },
                 { "include": "#imports" },
+                { "include": "#json" },
                 { "include": "#js" }
             ],
             "name": "string.imports"
@@ -36,6 +37,10 @@
         "js": {
             "match": "\\.js",
             "name": "keyword.imports"
+        },
+        "json": {
+            "match": "\\.json",
+            "name": "entity.other.attribute-name.imports"
         },
         "comment": {
             "match": "^\\/\\/.*$",
