@@ -53,6 +53,13 @@
 			<key>name</key>
 			<string>keyword.imports</string>
 		</dict>
+		<key>json</key>
+		<dict>
+			<key>match</key>
+			<string>\.json</string>
+			<key>name</key>
+			<string>entity.other.attribute-name.imports</string>
+		</dict>
 		<key>path</key>
 		<dict>
 			<key>begin</key>
@@ -70,6 +77,10 @@
 				<dict>
 					<key>include</key>
 					<string>#imports</string>
+				</dict>
+				<dict>
+					<key>include</key>
+					<string>#json</string>
 				</dict>
 				<dict>
 					<key>include</key>
